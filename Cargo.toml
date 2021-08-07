@@ -6,4 +6,4 @@ edition = "2018"
 
 [dependencies.chearmyp_abstract_source]
 git = "http://chearmyp.local/chearmyp_abstract_source"
-tag = "v0.1.0"
+tag = "v0.1.1"
