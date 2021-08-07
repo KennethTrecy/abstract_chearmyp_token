@@ -29,4 +29,9 @@ pub trait AbstractToken {
 
 	/// Creates new complex token.
 	fn new_complex(_: Self::Source) -> Self;
+
+	/// Creates new attacher token.
+	///
+	/// First parameter is the label, and the second parameter is the content.
+	fn new_attacher(_: Self::Source, _: Self::Source) -> Self;
 }
