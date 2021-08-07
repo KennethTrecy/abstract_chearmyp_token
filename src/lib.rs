@@ -1,13 +1,13 @@
 #![no_std]
 
+mod abstracts {
+	pub use chearmyp_abstract_source::AbstractSource;
+}
+
 mod token_kind;
 mod abstract_token;
 mod abstract_scope_level_token;
 mod abstract_line_comment_token;
-
-mod abstracts {
-	pub use chearmyp_abstract_source::AbstractSource;
-}
 
 pub use token_kind::TokenKind;
 pub use abstract_token::AbstractToken;
