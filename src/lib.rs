@@ -1,3 +1,5 @@
+#![no_std]
+
 mod token_kind;
 mod abstract_token;
 mod abstract_scope_level_token;
