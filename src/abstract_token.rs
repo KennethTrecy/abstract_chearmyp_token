@@ -34,4 +34,7 @@ pub trait AbstractToken {
 	///
 	/// First parameter is the label, and the second parameter is the content.
 	fn new_attacher(_: Self::Source, _: Self::Source) -> Self;
+
+	/// Creates new block othertongue token.
+	fn new_block_othertongue_token(_: Self::SourceCollection) -> Self;
 }

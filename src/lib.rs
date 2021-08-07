@@ -20,6 +20,7 @@ mod abstract_scope_level_token;
 mod abstract_line_comment_token;
 mod abstract_block_comment_token;
 mod abstract_line_othertongue_token;
+mod abstract_block_othertongue_token;
 
 pub use from_token::FromToken;
 pub use token_kind::TokenKind;
@@ -31,3 +32,4 @@ pub use abstract_scope_level_token::AbstractScopeLevelToken;
 pub use abstract_line_comment_token::AbstractLineCommentToken;
 pub use abstract_block_comment_token::AbstractBlockCommentToken;
 pub use abstract_line_othertongue_token::AbstractLineOthertongueToken;
+pub use abstract_block_othertongue_token::AbstractBlockOthertongueToken;
