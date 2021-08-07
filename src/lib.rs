@@ -7,7 +7,7 @@
 //! - `no_std`: Uses the `core` crate instead of `std` crate.
 
 mod abstracts {
-	pub use chearmyp_abstract_source::AbstractSource;
+	pub use chearmyp_abstract_source::{AbstractSource, AbstractSourceCollection};
 }
 
 mod token_kind;
