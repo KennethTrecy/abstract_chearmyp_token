@@ -26,4 +26,7 @@ pub trait AbstractToken {
 
 	/// Creates new block comment token.
 	fn new_block_comment_token(_: Self::SourceCollection) -> Self;
+
+	/// Creates new complex token.
+	fn new_complex(_: Self::Source) -> Self;
 }
