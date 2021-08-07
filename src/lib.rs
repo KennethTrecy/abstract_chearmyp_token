@@ -13,6 +13,7 @@ mod abstracts {
 mod from_token;
 mod token_kind;
 mod abstract_token;
+mod abstract_token_queue;
 mod abstract_complex_token;
 mod abstract_simplex_token;
 mod abstract_attacher_token;
@@ -25,6 +26,7 @@ mod abstract_block_othertongue_token;
 pub use from_token::FromToken;
 pub use token_kind::TokenKind;
 pub use abstract_token::AbstractToken;
+pub use abstract_token_queue::AbstractTokenQueue;
 pub use abstract_complex_token::AbstractComplexToken;
 pub use abstract_simplex_token::AbstractSimplexToken;
 pub use abstract_attacher_token::AbstractAttacherToken;
