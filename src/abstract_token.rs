@@ -25,7 +25,7 @@ pub trait AbstractToken {
 	fn new_line_othertongue(_: Self::Source) -> Self;
 
 	/// Creates new block comment token.
-	fn new_block_comment_token(_: Self::SourceCollection) -> Self;
+	fn new_block_comment(_: Self::SourceCollection) -> Self;
 
 	/// Creates new complex token.
 	fn new_complex(_: Self::Source) -> Self;
@@ -36,5 +36,5 @@ pub trait AbstractToken {
 	fn new_attacher(_: Self::Source, _: Self::Source) -> Self;
 
 	/// Creates new block othertongue token.
-	fn new_block_othertongue_token(_: Self::SourceCollection) -> Self;
+	fn new_block_othertongue(_: Self::SourceCollection) -> Self;
 }
