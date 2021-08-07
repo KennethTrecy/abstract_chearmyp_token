@@ -1,5 +1,8 @@
 #![no_std]
 
+//! # Chearmyp Abstract Token
+//! Please read the README.md for more information.
+
 mod abstracts {
 	pub use chearmyp_abstract_source::AbstractSource;
 }
