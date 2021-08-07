@@ -17,4 +17,7 @@ pub trait AbstractToken {
 
 	/// Creates new simplex token.
 	fn new_simplex(_: usize) -> Self;
+
+	/// Creates new line othertongue token.
+	fn new_line_othertongue(_: Self::Source) -> Self;
 }
