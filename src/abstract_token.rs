@@ -3,6 +3,7 @@ use crate::TokenKind;
 
 /// An abstraction of Chearmyp token.
 pub trait AbstractToken {
+	/// The type of source where all tokens will be built from.
 	type Source: AbstractSource;
 
 	/// Returns the kind of the token it holds.
