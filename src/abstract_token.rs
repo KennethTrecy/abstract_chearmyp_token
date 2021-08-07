@@ -14,4 +14,7 @@ pub trait AbstractToken {
 
 	/// Creates new scope level token.
 	fn new_scope_level(_: usize) -> Self;
+
+	/// Creates new simplex token.
+	fn new_simplex(_: usize) -> Self;
 }
