@@ -19,7 +19,7 @@ pub trait AbstractToken {
 	fn new_scope_level(_: usize) -> Self;
 
 	/// Creates new simplex token.
-	fn new_simplex(_: usize) -> Self;
+	fn new_simplex(_: Self::Source) -> Self;
 
 	/// Creates new line othertongue token.
 	fn new_line_othertongue(_: Self::Source) -> Self;
