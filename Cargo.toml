@@ -10,4 +10,4 @@ tag = "v0.1.1"
 
 [features]
 default = []
-no_std = []
+no_std = ["chearmyp_abstract_source/no_std"]
