@@ -14,3 +14,6 @@ pub trait AbstractTokenQueue {
 	/// Takes the first token in the token queue.
 	fn shift_token(&mut self) -> Option<Self::Token>;
 }
+
+#[cfg(feature = "vecdeque_token_queue")]
+mod vec_deque;

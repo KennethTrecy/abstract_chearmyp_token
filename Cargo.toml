@@ -8,6 +8,12 @@ edition = "2018"
 git = "http://chearmyp.local/chearmyp_abstract_source"
 tag = "v0.2.0"
 
+[dev-dependencies.chearmyp_abstract_source]
+git = "http://chearmyp.local/chearmyp_abstract_source"
+tag = "v0.2.0"
+features = ["str_source", "vec_source_collection"]
+
 [features]
 default = []
 no_std = ["chearmyp_abstract_source/no_std"]
+vecdeque_token_queue = []

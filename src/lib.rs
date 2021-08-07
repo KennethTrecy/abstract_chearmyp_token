@@ -6,6 +6,9 @@
 //! ## Features available
 //! - `no_std`: Uses the `core` crate instead of `std` crate.
 
+#[cfg(feature = "no_std")]
+extern crate alloc;
+
 mod abstracts {
 	pub use chearmyp_abstract_source::{AbstractSource, AbstractSourceCollection};
 }
