@@ -15,6 +15,7 @@
 	doc = "- `vecdeque_token_queue`: Implements [AbstractTokenQueue]
 												for [std::collections::VecDeque].",
 )]
+//! - `assertable_token_kind`: Allows token kind to be tested.
 
 #[cfg(feature = "no_std")]
 extern crate alloc;
