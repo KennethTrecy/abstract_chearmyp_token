@@ -10,7 +10,7 @@
 extern crate alloc;
 
 mod abstracts {
-	pub use chearmyp_abstract_source::{AbstractSource, AbstractSourceCollection};
+	pub use abstract_chearmyp_source::{AbstractSource, AbstractSourceCollection};
 }
 
 mod from_token;
