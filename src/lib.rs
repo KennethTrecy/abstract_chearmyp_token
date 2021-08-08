@@ -28,24 +28,19 @@ mod from_token;
 mod token_kind;
 mod abstract_token;
 mod abstract_token_queue;
-mod abstract_complex_token;
-mod abstract_simplex_token;
-mod abstract_attacher_token;
-mod abstract_scope_level_token;
-mod abstract_line_comment_token;
-mod abstract_block_comment_token;
-mod abstract_line_othertongue_token;
-mod abstract_block_othertongue_token;
+mod specific_abstract_tokens;
 
 pub use from_token::FromToken;
 pub use token_kind::TokenKind;
 pub use abstract_token::AbstractToken;
 pub use abstract_token_queue::AbstractTokenQueue;
-pub use abstract_complex_token::AbstractComplexToken;
-pub use abstract_simplex_token::AbstractSimplexToken;
-pub use abstract_attacher_token::AbstractAttacherToken;
-pub use abstract_scope_level_token::AbstractScopeLevelToken;
-pub use abstract_line_comment_token::AbstractLineCommentToken;
-pub use abstract_block_comment_token::AbstractBlockCommentToken;
-pub use abstract_line_othertongue_token::AbstractLineOthertongueToken;
-pub use abstract_block_othertongue_token::AbstractBlockOthertongueToken;
+pub use specific_abstract_tokens::{
+	AbstractComplexToken,
+	AbstractSimplexToken,
+	AbstractAttacherToken,
+	AbstractScopeLevelToken,
+	AbstractLineCommentToken,
+	AbstractBlockCommentToken,
+	AbstractLineOthertongueToken,
+	AbstractBlockOthertongueToken
+};
