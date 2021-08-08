@@ -4,6 +4,6 @@ version = "0.1.0-dev"
 authors = ["Kenneth Trecy Tobias <33564322+KennethTrecy@users.noreply.github.com>"]
 edition = "2018"
 
-[dependencies.chearmyp_abstract_source]
-git = "http://chearmyp.local/chearmyp_abstract_source"
-tag = "v0.2.0"
+[dependencies.abstract_chearmyp_source]
+git = "http://chearmyp.local/abstract_chearmyp_source"
+tag = "v0.3.0"
