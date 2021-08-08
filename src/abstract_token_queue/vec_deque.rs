@@ -6,6 +6,9 @@ use std::collections::VecDeque;
 
 use crate::{ AbstractToken, AbstractTokenQueue };
 
+/// This is only available if `vecdeque_token_queue` feature has been activated.
+///
+/// It implements [AbstractTokenQueue] for [VecDeque].
 impl<T> AbstractTokenQueue for VecDeque<T>
 where
 	T: AbstractToken {
