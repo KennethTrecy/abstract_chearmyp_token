@@ -5,6 +5,16 @@
 //!
 //! ## Features available
 //! - `no_std`: Uses the `core` crate instead of `std` crate.
+#![cfg_attr(
+	feature = "no_std",
+	doc = "- `vecdeque_token_queue`: Implements [AbstractTokenQueue]
+												for [alloc::collections::VecDeque].",
+)]
+#![cfg_attr(
+	not(feature = "no_std"),
+	doc = "- `vecdeque_token_queue`: Implements [AbstractTokenQueue]
+												for [std::collections::VecDeque].",
+)]
 
 #[cfg(feature = "no_std")]
 extern crate alloc;
