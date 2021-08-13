@@ -24,13 +24,11 @@ mod abstracts {
 	pub use abstract_chearmyp_source::{AbstractSource, AbstractSourceCollection};
 }
 
-mod from_token;
 mod token_kind;
 mod abstract_token;
 mod abstract_token_queue;
 mod specific_abstract_tokens;
 
-pub use from_token::FromToken;
 pub use token_kind::TokenKind;
 pub use abstract_token::AbstractToken;
 pub use abstract_token_queue::AbstractTokenQueue;

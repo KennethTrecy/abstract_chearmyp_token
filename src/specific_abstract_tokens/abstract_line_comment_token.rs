@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of line comment token.
-pub trait AbstractLineCommentToken : FromToken {
+pub trait AbstractLineCommentToken {
 	/// The line in line comment token which could be a string, array of bytes, or other type.
 	type Line;
 

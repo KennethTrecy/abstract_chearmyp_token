@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of complex token.
-pub trait AbstractComplexToken : FromToken {
+pub trait AbstractComplexToken {
 	/// The type that represents the complex' name.
 	type Complex;
 

@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of simplex token.
-pub trait AbstractSimplexToken : FromToken {
+pub trait AbstractSimplexToken {
 	/// The type that represents the simplex' name.
 	type Simplex;
 

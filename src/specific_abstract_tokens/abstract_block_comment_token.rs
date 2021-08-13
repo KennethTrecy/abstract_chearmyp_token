@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of block comment token.
-pub trait AbstractBlockCommentToken : FromToken {
+pub trait AbstractBlockCommentToken {
 	/// The type of block in the block comment token which could be a string, array of strings, or
 	/// other type.
 	type Block;

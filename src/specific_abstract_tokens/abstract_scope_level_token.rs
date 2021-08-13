@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of scope level token.
-pub trait AbstractScopeLevelToken : FromToken {
+pub trait AbstractScopeLevelToken {
 	/// Returns the scope level it contains.
 	fn level(&self) -> usize;
 }

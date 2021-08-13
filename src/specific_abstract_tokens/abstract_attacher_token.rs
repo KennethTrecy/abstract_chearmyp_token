@@ -1,7 +1,5 @@
-use crate::FromToken;
-
 /// An abstraction of attacher token.
-pub trait AbstractAttacherToken : FromToken {
+pub trait AbstractAttacherToken {
 	/// The type of label in the attacher token.
 	type Label;
 
