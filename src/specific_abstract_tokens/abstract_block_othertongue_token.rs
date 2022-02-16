@@ -5,5 +5,8 @@ pub trait AbstractBlockOthertongueToken {
 	type Block;
 
 	/// Returns the block in the block othertongue token.
-	fn block(&self) -> Self::Block;
+	fn block(&self) -> &Self::Block;
+
+	/// Consumes the block othertongue token into block.
+	fn consume(self) -> Self::Block;
 }

@@ -4,5 +4,8 @@ pub trait AbstractComplexToken {
 	type Complex;
 
 	/// Returns the name of the complex token.
-	fn name(&self) -> Self::Complex;
+	fn name(&self) -> &Self::Complex;
+
+	/// Consumes the complex token into concept.
+	fn consume(self) -> Self::Complex;
 }

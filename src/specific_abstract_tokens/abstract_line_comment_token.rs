@@ -4,5 +4,8 @@ pub trait AbstractLineCommentToken {
 	type Line;
 
 	/// Returns the line in line comment token.
-	fn line(&self) -> Self::Line;
+	fn line(&self) -> &Self::Line;
+
+	/// Consumes the line comment token into line.
+	fn consume(self) -> Self::Line;
 }

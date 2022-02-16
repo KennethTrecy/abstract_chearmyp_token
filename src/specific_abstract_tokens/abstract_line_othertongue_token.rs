@@ -4,5 +4,8 @@ pub trait AbstractLineOthertongueToken {
 	type Line;
 
 	/// Returns the line in line othertongue token.
-	fn line(&self) -> Self::Line;
+	fn line(&self) -> &Self::Line;
+
+	/// Consumes the line othertongue token into line.
+	fn consume(self) -> Self::Line;
 }

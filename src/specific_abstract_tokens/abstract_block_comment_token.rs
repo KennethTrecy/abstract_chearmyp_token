@@ -5,5 +5,8 @@ pub trait AbstractBlockCommentToken {
 	type Block;
 
 	/// Returns the block in the block comment token.
-	fn block(&self) -> Self::Block;
+	fn block(&self) -> &Self::Block;
+
+	/// Consumes the block comment token into block.
+	fn consume(self) -> Self::Block;
 }

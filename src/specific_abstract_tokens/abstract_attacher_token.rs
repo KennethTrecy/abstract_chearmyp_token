@@ -7,8 +7,11 @@ pub trait AbstractAttacherToken {
 	type Content;
 
 	/// Returns the label of the attacher.
-	fn label(&self) -> Self::Label;
+	fn label(&self) -> &Self::Label;
 
 	/// Returns the content of the attacher.
-	fn content(&self) -> Self::Content;
+	fn content(&self) -> &Self::Content;
+
+	/// Consumes the attacher token into tuple.
+	fn consume(self) -> (Self::Label, Self::Content);
 }
