@@ -4,31 +4,32 @@ use alloc::collections::VecDeque;
 #[cfg(not(feature = "no_std"))]
 use std::collections::VecDeque;
 
-use crate::{ AbstractToken, AbstractTokenQueue };
+use crate::abstracts::{AbstractBoundary, AbstractBoundaryCollection};
+use crate::{AbstractToken, AbstractTokenQueue};
 
 /// This is only available if `vecdeque_token_queue` feature has been activated.
 ///
 /// It implements [AbstractTokenQueue] for [VecDeque].
-impl<T> AbstractTokenQueue for VecDeque<T>
+impl<T, U, V, W, X, Y> AbstractTokenQueue<T, U, V, W, X, Y> for VecDeque<Y>
 where
-	T: AbstractToken {
-	type Token = T;
-
-	fn new() -> Self { VecDeque::new() }
-
-	fn push_token(&mut self, token: Self::Token) {
+	U: AbstractBoundary<T>,
+	W: AbstractBoundary<V>,
+	X: AbstractBoundaryCollection<V, W>,
+	Y: AbstractToken<T, U, V, W, X> {
+	fn push_token(&mut self, token: Y) {
 		self.push_back(token)
 	}
 
-	fn shift_token(&mut self) -> Option<Self::Token> {
+	fn shift_token(&mut self) -> Option<Y> {
 		self.pop_front()
 	}
 }
 
 #[cfg(test)]
 mod t {
-	use crate::TokenKind;
-	use super::{ AbstractToken, AbstractTokenQueue, VecDeque };
+	use crate::native::{Range, Vec};
+	use crate::{TokenKind, SimpleAbstractToken};
+	use super::{AbstractTokenQueue, VecDeque};
 
 	#[cfg(feature = "no_std")]
 	use alloc::vec::Vec;
@@ -40,32 +41,29 @@ mod t {
 	}
 
 	// Just a dummy token implementation
-	impl<'a> AbstractToken for Token<'a> {
-		type Source = &'a str;
-		type SourceCollection = Vec<&'a str>;
-
+	impl<'a> SimpleAbstractToken<u8, Range<u8>, Vec<Range<u8>>> for Token<'a> {
 		fn kind(&self) -> TokenKind { TokenKind::Simplex }
 
 		fn new_scope_level(_: usize) -> Self { Token::new() }
 
-		fn new_complex(_: Self::Source) -> Self { Token::new() }
+		fn new_complex(_: Range<u8>) -> Self { Token::new() }
 
-		fn new_simplex(_: Self::Source) -> Self { Token::new() }
+		fn new_simplex(_: Range<u8>) -> Self { Token::new() }
 
-		fn new_attacher(_: Self::Source, _: Self::Source) -> Self { Token::new() }
+		fn new_attacher(_: Range<u8>, _: Range<u8>) -> Self { Token::new() }
 
-		fn new_line_comment(_: Self::Source) -> Self { Token::new() }
+		fn new_line_comment(_: Range<u8>) -> Self { Token::new() }
 
-		fn new_block_comment(_: Self::SourceCollection) -> Self { Token::new() }
+		fn new_block_comment(_: Vec<Range<u8>>) -> Self { Token::new() }
 
-		fn new_line_othertongue(_: Self::Source) -> Self { Token::new() }
+		fn new_line_othertongue(_: Range<u8>) -> Self { Token::new() }
 
-		fn new_block_othertongue(_: Self::SourceCollection) -> Self { Token::new() }
+		fn new_block_othertongue(_: Vec<Range<u8>>) -> Self { Token::new() }
 	}
 
 	#[test]
 	fn should_push_token() {
-		let mut queue = <VecDeque<Token> as AbstractTokenQueue>::new();
+		let mut queue = VecDeque::<Token>::new();
 		let mut expected_queue = VecDeque::new();
 		expected_queue.push_back(Token::new_scope_level(0));
 
@@ -76,7 +74,7 @@ mod t {
 
 	#[test]
 	fn should_pop_none() {
-		let mut queue = <VecDeque<Token> as AbstractTokenQueue>::new();
+		let mut queue = VecDeque::<Token>::new();
 		let expected_token = None;
 
 		let token = queue.shift_token();
@@ -87,7 +85,7 @@ mod t {
 	#[test]
 	fn should_pop_some() {
 		let token = Token::new();
-		let mut queue = <VecDeque<Token> as AbstractTokenQueue>::new();
+		let mut queue = VecDeque::<Token>::new();
 		queue.push_back(token);
 
 		let token = queue.shift_token();
