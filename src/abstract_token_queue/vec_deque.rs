@@ -31,9 +31,6 @@ mod t {
 	use crate::{TokenKind, SimpleAbstractToken};
 	use super::{AbstractTokenQueue, VecDeque};
 
-	#[cfg(feature = "no_std")]
-	use alloc::vec::Vec;
-
 	#[derive(Debug, PartialEq)]
 	struct Token<'a> { _data: &'a str }
 	impl<'a> Token<'a> {
