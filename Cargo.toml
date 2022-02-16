@@ -1,8 +1,8 @@
 [package]
 name = "abstract_chearmyp_token"
 version = "0.3.0-dev"
-authors = ["Kenneth Trecy Tobias <33564322+KennethTrecy@users.noreply.github.com>"]
-edition = "2018"
+authors = ["Kenneth Trecy Tobias <web.kennethtobias@gmail.com>"]
+edition = "2021"
 
 [dependencies.abstract_chearmyp_source]
 git = "http://chearmyp.local/abstract_chearmyp_source"
