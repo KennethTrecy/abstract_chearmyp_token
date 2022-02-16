@@ -1,5 +1,5 @@
 # Abstract Chearmyp Token
-An abstraction of Chearmyp language represented as queue of tokens.
+An abstraction of Chearmyp tokens.
 
 ## Installation
 Add it to the dependencies:
