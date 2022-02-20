@@ -4,14 +4,16 @@ An abstraction of Chearmyp tokens.
 ## Installation
 Add it to the dependencies:
 ```
-abstract_chearmyp_token = { git = "http://chearmyp.local/abstract_chearmyp_token", tag = "v0.1.1" }
+[dependencies.abstract_chearmyp_token]
+git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
+tag = "v0.3.0"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.abstract_chearmyp_token]
-git = "http://chearmyp.local/abstract_chearmyp_token"
-tag = "v0.1.1"
+git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
+tag = "v0.3.0"
 features = ["no_std", "vecdeque_token_queue", "assertable_token_kind"]
 ```
 
