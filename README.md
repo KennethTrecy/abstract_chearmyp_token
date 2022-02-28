@@ -6,14 +6,14 @@ Add it to the dependencies:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v0.3.0"
+tag = "v0.3.1"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v0.3.0"
+tag = "v0.3.1"
 features = ["no_std", "vecdeque_token_queue", "assertable_token_kind"]
 ```
 
