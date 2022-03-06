@@ -1,6 +1,6 @@
 [package]
 name = "abstract_chearmyp_token"
-version = "0.4.0-dev"
+version = "0.4.0"
 authors = ["Kenneth Trecy Tobias <web.kennethtobias@gmail.com>"]
 edition = "2021"
 
