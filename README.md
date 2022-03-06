@@ -18,7 +18,7 @@ features = ["no_std", "vecdeque_token_queue", "assertable_token_kind"]
 ```
 
 ## Origin
-The repository was based from [`filled_bare_metal`] branch of [Feo Template].
+Some parts of the repository was based from [`filled_bare_metal`] branch of [Feo Template].
 
 ### Documentation
 Run the following on the console:
