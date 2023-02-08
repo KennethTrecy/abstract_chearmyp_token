@@ -15,14 +15,14 @@ Add it to the dependencies:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v0.4.1"
+tag = "v1.0.0"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v0.4.1"
+tag = "v1.0.0"
 features = ["no_std", "vecdeque_token_queue", "assertable_token_kind"]
 ```
 
