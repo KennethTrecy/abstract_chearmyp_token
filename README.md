@@ -38,7 +38,7 @@ cargo doc --all-features --open
 ```
 
 ### Initialization
-This template should be initialized to adhere in [Conventional Commits specification] for organize
+If you want to contribute, this repository should be initialized to adhere in [Conventional Commits specification] for organize
 commits and automated generation of change log.
 
 #### Prerequisites
