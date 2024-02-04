@@ -1,7 +1,7 @@
-use crate::AbstractBlockOthertongueToken;
+use crate::AbstractOthertongueToken;
 use super::DynamicAbstractToken;
 
-impl<T, U> AbstractBlockOthertongueToken for U
+impl<T, U> AbstractOthertongueToken for U
 where
 	U: DynamicAbstractToken<Block = T> {
 	type Block = T;

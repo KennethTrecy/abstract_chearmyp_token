@@ -4,27 +4,24 @@
 /// trying to do an invalid operation. For example, getting the label from a simplex token must
 /// panic. Getting the label can only be done for an attacher token.
 ///
-/// Automatically implements [AbstractComplexToken], [AbstractSimplexToken],
-/// [AbstractAttacherToken], [AbstractScopeLevelToken], [AbstractLineCommentToken],
-/// [AbstractBlockCommentToken], [AbstractLineOthertongueToken], and
-/// [AbstractBlockOthertongueToken].
+/// Automatically implements [AbstractEdonToken], [AbstractAttacherToken],
+/// [AbstractScopeLevelToken], [AbstractLineCommentToken],
+/// [AbstractBlockCommentToken], and [AbstractOthertongueToken].
 ///
-/// [AbstractComplexToken]: crate::AbstractComplexToken
-/// [AbstractSimplexToken]: crate::AbstractSimplexToken
+/// [AbstractEdonToken]: crate::AbstractEdonToken
 /// [AbstractAttacherToken]: crate::AbstractAttacherToken
 /// [AbstractScopeLevelToken]: crate::AbstractScopeLevelToken
 /// [AbstractLineCommentToken]: crate::AbstractLineCommentToken
 /// [AbstractBlockCommentToken]: crate::AbstractBlockCommentToken
-/// [AbstractLineOthertongueToken]: crate::AbstractLineOthertongueToken
-/// [AbstractBlockOthertongueToken]: crate::AbstractBlockOthertongueToken
+/// [AbstractOthertongueToken]: crate::AbstractOthertongueToken
 pub trait DynamicAbstractToken {
-	/// The type that represents the complex' name or simplex' name.
+	/// The type that represents the edon's name.
 	type Name;
 
-	/// The type of line in the line comment token or line othertongue token.
+	/// The type of line in the line comment token.
 	type Line;
 
-	/// The type of block in the block comment token or block othertongue token.
+	/// The type of block in the block comment token or othertongue token.
 	type Block;
 
 	/// The type of label in the attacher token.
@@ -33,13 +30,13 @@ pub trait DynamicAbstractToken {
 	/// The type of content in the attacher token.
 	type Content;
 
-	/// Returns the name of the simplex token or complex token.
+	/// Returns the name of the edon token.
 	fn name(&self) -> &Self::Name;
 
-	/// Returns the line in line comment token or line othertongue token.
+	/// Returns the line in line comment token.
 	fn line(&self) -> &Self::Line;
 
-	/// Returns the block in the block comment token or block othertongue token.
+	/// Returns the block in the block comment token or othertongue token.
 	fn block(&self) -> &Self::Block;
 
 	/// Returns the scope level of scope level token.
@@ -57,18 +54,16 @@ pub trait DynamicAbstractToken {
 	/// Consumes the block comment or othertongue token into block.
 	fn consume_block(self) -> Self::Block;
 
-	/// Consumes the simplex or complex token into concept.
+	/// Consumes the edon token into concept.
 	fn consume_concept(self) -> Self::Name;
 
-	/// Consumes the line comment or othertongue token into line.
+	/// Consumes the line comment token into line.
 	fn consume_line(self) -> Self::Line;
 }
 
-mod abstract_complex_token;
-mod abstract_simplex_token;
+mod abstract_edon_token;
 mod abstract_attacher_token;
 mod abstract_scope_level_token;
 mod abstract_line_comment_token;
 mod abstract_block_comment_token;
-mod abstract_line_othertongue_token;
-mod abstract_block_othertongue_token;
+mod abstract_othertongue_token;
