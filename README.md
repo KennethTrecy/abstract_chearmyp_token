@@ -63,6 +63,10 @@ $ npx changelogen --from=[tag name or branch name or commit itself] --to=master
 
 ## Notes
 
+### Compatibility
+Otherwise noted, the current implementation in this repository is compatible with Chearmyp language
+outlined in [reference v0.8.0 and later].
+
 ### License
 The repository is licensed under [MIT].
 
@@ -79,3 +83,4 @@ Abstract Chearmyp Token was created by Kenneth Trecy Tobias.
 [pnpm]: https://pnpm.io/installation
 [Conventional Commits specification]: https://www.conventionalcommits.org/en/v1.0.0/
 [contributing guide]: ./CONTRIBUTING.md
+[reference v0.8.0 and later]: https://github.com/KennethTrecy/chearmyp_reference/tree/v0.8.1
