@@ -21,25 +21,22 @@ where
 	/// Creates new scope level token.
 	fn new_scope_level(_: usize) -> Self;
 
-	/// Creates new simplex token.
-	fn new_simplex(_: U) -> Self;
-
 	/// Creates new line othertongue token.
 	fn new_line_othertongue(_: U) -> Self;
 
 	/// Creates new block comment token.
 	fn new_block_comment(_: V) -> Self;
 
-	/// Creates new complex token.
-	fn new_complex(_: U) -> Self;
+	/// Creates new edon token.
+	fn new_edon(_: U) -> Self;
 
 	/// Creates new attacher token.
 	///
 	/// First parameter is the label, and the second parameter is the content.
 	fn new_attacher(_: U, _: U) -> Self;
 
-	/// Creates new block othertongue token.
-	fn new_block_othertongue(_: V) -> Self;
+	/// Creates new othertongue token.
+	fn new_othertongue(_: V) -> Self;
 }
 
 mod abstract_token;
