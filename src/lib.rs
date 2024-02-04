@@ -52,12 +52,10 @@ pub use abstract_token_queue::AbstractTokenQueue;
 pub use simple_abstract_token::SimpleAbstractToken;
 pub use dynamic_abstract_token::DynamicAbstractToken;
 pub use specific_abstract_tokens::{
-	AbstractComplexToken,
-	AbstractSimplexToken,
+	AbstractEdonToken,
 	AbstractAttacherToken,
 	AbstractScopeLevelToken,
 	AbstractLineCommentToken,
 	AbstractBlockCommentToken,
-	AbstractLineOthertongueToken,
-	AbstractBlockOthertongueToken
+	AbstractOthertongueToken
 };
