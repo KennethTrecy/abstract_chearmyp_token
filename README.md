@@ -4,7 +4,6 @@
 ![GitHub closed issues count](https://img.shields.io/github/issues-closed/KennethTrecy/abstract_chearmyp_token?style=for-the-badge)
 ![GitHub pull request count](https://img.shields.io/github/issues-pr-closed/KennethTrecy/abstract_chearmyp_token?style=for-the-badge)
 ![Commits since latest version](https://img.shields.io/github/commits-since/KennethTrecy/abstract_chearmyp_token/latest?style=for-the-badge)
-![Lines of code](https://img.shields.io/tokei/lines/github/KennethTrecy/abstract_chearmyp_token?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/repo-size/KennethTrecy/abstract_chearmyp_token?style=for-the-badge)
 
 # Abstract Chearmyp Token
@@ -15,14 +14,14 @@ Add it to the dependencies:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v1.0.0"
+tag = "v2.0.0"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.abstract_chearmyp_token]
 git = "https://github.com/KennethTrecy/abstract_chearmyp_token"
-tag = "v1.0.0"
+tag = "v2.0.0"
 features = ["no_std", "vecdeque_token_queue", "assertable_token_kind"]
 ```
 
