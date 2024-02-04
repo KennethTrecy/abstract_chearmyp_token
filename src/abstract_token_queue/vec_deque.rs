@@ -39,13 +39,11 @@ mod t {
 
 	// Just a dummy token implementation
 	impl<'a> SimpleAbstractToken<u8, Range<u8>, Vec<Range<u8>>> for Token<'a> {
-		fn kind(&self) -> TokenKind { TokenKind::Simplex }
+		fn kind(&self) -> TokenKind { TokenKind::Edon }
 
 		fn new_scope_level(_: usize) -> Self { Token::new() }
 
-		fn new_complex(_: Range<u8>) -> Self { Token::new() }
-
-		fn new_simplex(_: Range<u8>) -> Self { Token::new() }
+		fn new_edon(_: Range<u8>) -> Self { Token::new() }
 
 		fn new_attacher(_: Range<u8>, _: Range<u8>) -> Self { Token::new() }
 
@@ -55,7 +53,7 @@ mod t {
 
 		fn new_line_othertongue(_: Range<u8>) -> Self { Token::new() }
 
-		fn new_block_othertongue(_: Vec<Range<u8>>) -> Self { Token::new() }
+		fn new_othertongue(_: Vec<Range<u8>>) -> Self { Token::new() }
 	}
 
 	#[test]
