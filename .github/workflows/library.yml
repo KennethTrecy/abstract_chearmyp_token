@@ -17,9 +17,10 @@ jobs:
   library_tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
       - name: Test all features
-        uses: actions-rs/cargo@v1
+        uses: clechasseur/rs-cargo@v2
         with:
           command: test
           args: --all-features
